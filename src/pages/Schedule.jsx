@@ -123,7 +123,7 @@ const RoutineItem = ({ time, activity, completed }) => {
 			{time}
 			{activity && (
 				<span
-					className={`absolute right-4 text-sm font-normal font-semibold bottom-0 py-1 px-3 rounded-full ${
+					className={`absolute right-4 text-sm font-semibold bottom-0 py-1 px-3 rounded-full ${
 						completed
 							? "bg-zinc-300"
 							: "bg-gradient-to-r from-pink-200 to-purple-500"

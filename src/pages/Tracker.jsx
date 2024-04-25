@@ -32,7 +32,7 @@ const Tracker = () => {
 			<div onClick={handleClick} className="cursor-pointer">
 				<img src={graph} alt="" />
 			</div>
-			<div className="flex gap-4 p-2 bg-gradient-to-r from-[#dae1fb] to-slate-400 to-white rounded-lg">
+			<div className="flex gap-4 p-2 bg-gradient-to-r from-[#dae1fb] to-slate-400, to-white rounded-lg">
 				<img src={alert} alt="" />
 				<p className="text-md ">
 					You've burned fewer calories than yesterday. Time to get moving!

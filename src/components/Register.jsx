@@ -1,13 +1,20 @@
 import React from "react";
 import google from "../assets/google.svg";
 import facebook from "../assets/facebook.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
+	const navigate = useNavigate();
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		navigate("/login");
+	};
+
 	return (
 		<div className="w-[375px] flex flex-col shadow-sm p-4 rounded-b-xl gap-10 bg-white">
 			<h1 className="text-xl font-semibold">Create an account</h1>
-			<form action="./login" className="flex flex-col gap-4">
+			<form className="flex flex-col gap-4" onSubmit={handleSubmit}>
 				<input
 					className="p-2 border rounded-[12px] bg-[#F1F1F1] h-[50px] outline-none"
 					type="text"

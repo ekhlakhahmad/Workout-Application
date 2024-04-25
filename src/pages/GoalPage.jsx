@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const GoalPage = () => {
 	const goals = [
@@ -9,10 +10,17 @@ const GoalPage = () => {
 		{ text: "Event-specific Training" },
 		{ text: "Mindfulness and Mental Health" },
 	];
+	const navigate = useNavigate();
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		navigate("/tracker");
+	};
+	
 
 	return (
 		<form
-			action="/tracker"
+			onSubmit={handleSubmit}
 			className="w-[375px] flex flex-col shadow-sm p-4 rounded-b-xl  bg-white gap-5">
 			<h1 className="text-center text-xl font-semibold">
 				What are your goals?
